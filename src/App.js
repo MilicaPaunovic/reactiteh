@@ -8,8 +8,8 @@ import Detalji from './Detalji';
 function App() {
 
   const [products] = useState([
-    { id: 1, title: 'Proizvod 1', description: 'dsadasd as dasd a d sa das a s ad', price: 10 },
-    { id: 2, title: 'Proizvod 2', description: 'dsadasd as dasd a d sa das a s ad', price: 20 },
+    { id: 1, title: 'Proizvod 1', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,', price: 10 },
+    { id: 2, title: 'AAA 2', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,', price: 20 },
   ]);
   
   const [bids,setBids] = useState([
