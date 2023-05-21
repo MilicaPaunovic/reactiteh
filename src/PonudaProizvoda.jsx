@@ -1,4 +1,5 @@
 import React from 'react';
+import RedTabele from './RedTabele';
 
 function PonudaProizvoda({ products, bids }) {
   return (
@@ -13,24 +14,8 @@ function PonudaProizvoda({ products, bids }) {
           </tr>
         </thead>
         <tbody>
-          {products.map((product) => (
-            <tr key={product.id}>
-              <td>{product.id}</td>
-              <td>{product.title}</td>
-              <td>
-                <button
-                  onClick={() => {
-                    const productBids = bids.filter(
-                      (bid) => bid.productId === product.id
-                    );
-                    // Prikaz ponuda za odabrani proizvod
-                    console.log(productBids);
-                  }}
-                >
-                  Detalji
-                </button>
-              </td>
-            </tr>
+          {products.map((product,i) => (
+            <RedTabele key={i} product={product} bids={bids}></RedTabele>
           ))}
         </tbody>
       </table>
