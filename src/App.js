@@ -4,6 +4,7 @@ import './App.css';
 import PonudaProizvoda from './PonudaProizvoda';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
+import Detalji from './Detalji';
 function App() {
 
   const [products] = useState([
@@ -25,6 +26,7 @@ function App() {
         <Routes>
 
         <Route path='/' element={<PonudaProizvoda products={products} bids={bids}> </PonudaProizvoda>}></Route>
+        <Route path='/product/:id' element={<Detalji products={products} bids={bids}> </Detalji> }></Route>
         </Routes>
 
  
