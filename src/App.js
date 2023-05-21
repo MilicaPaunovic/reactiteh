@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+ 
+import { useState } from 'react';
 import './App.css';
+import PonudaProizvoda from './PonudaProizvoda';
 
 function App() {
+
+  const [products] = useState([
+    { id: 1, title: 'Proizvod 1', description: 'dsadasd as dasd a d sa das a s ad', price: 10 },
+    { id: 2, title: 'Proizvod 2', description: 'dsadasd as dasd a d sa das a s ad', price: 20 },
+  ]);
+  
+  const [bids] = useState([
+    { productId: 1, amount: 50 },
+    { productId: 1, amount: 60 },
+    { productId: 2, amount: 70 },
+  ]);
+ 
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PonudaProizvoda products={products} bids={bids}> </PonudaProizvoda>
     </div>
   );
 }
