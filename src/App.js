@@ -2,7 +2,8 @@
 import { useState } from 'react';
 import './App.css';
 import PonudaProizvoda from './PonudaProizvoda';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './Navbar';
 function App() {
 
   const [products] = useState([
@@ -19,9 +20,16 @@ function App() {
 
 
   return (
-    <div className="App">
-      <PonudaProizvoda products={products} bids={bids}> </PonudaProizvoda>
-    </div>
+    <Router>
+        <Navbar></Navbar>
+        <Routes>
+
+        <Route path='/' element={<PonudaProizvoda products={products} bids={bids}> </PonudaProizvoda>}></Route>
+        </Routes>
+
+ 
+      
+      </Router>
   );
 }
 
